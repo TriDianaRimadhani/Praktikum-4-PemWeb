@@ -1,0 +1,21 @@
+<html>
+<head>
+    <!--memanggil file library jquery-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <!--mendefinisikan jenis bahasa script yaitu javascript-->
+    <script type="text/javascript">
+    //fungsi yang berisi elemen-elemen untuk dieksekui
+    $(document).ready(function(){
+        $(".sembunyi").click(function() {$("#foto").hide("slow") });
+        $(".tampil").click(function() {$("#foto").show("slow") });
+    });
+    </script>
+</head>
+<body>
+    <!--eksekusi jquery yang telah didefinisikan -->
+    <button class="sembunyi">sembunyikan</button>
+    <button  class="tampil">tampilkan</button>
+    <!--pemanggilan media input gambar-->
+    <p><img id="foto" src="aestheticpinterest.jpg"></p>
+</body>
+</html>

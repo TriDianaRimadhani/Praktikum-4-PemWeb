@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Penggunaan Event DoubleClick</title>
+        <!--menghubungkan dengan script style.css untuk tampilan-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--mendefinisikan penggunaan bahasa script dan memanggil library jquery-->
+        <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+        <!--mendefinisikan sebuah style tampilan khusus area div untuk halaman ini-->
+        <style type="text/css">
+        div {
+            width: 100px; 
+            height: 100px; 
+            background-color: rgb(42, 3, 80);
+        }
+        </style>
+        <!--mendefinisikan jenis bahasa javascript-->
+        <script type="text/javascript">
+            //fungsi yang berisi elemen-elemen untuk dijalankan pada halaman web
+            $(document).ready(function(){
+                //menggunakan selektor class dan menambahkan class yang terdapat pada script style.css
+                $(".changebox").dblclick(function(){
+                    $(this).addClass("change");
+                });
+            });
+            </script>
+    </head>
+    <body>
+            <!--pengaturan tampilan tabel-->
+            <table class="center">
+                <th colspan="4">Klik 2x pada masing-masing kotak untuk mengubah warna</th>
+                <tr>
+                    <!--eksekusi fungsi jquery yang telah didefinisikan-->
+                    <td><div class="changebox" ></div></td>
+                    <td><div class="changebox" ></div></td>
+                    <td><div class="changebox" ></div></td>
+                    <td><div class="changebox" ></div></td>
+                </tr>
+            
+            </table>
+        
+    </body>
+</html>

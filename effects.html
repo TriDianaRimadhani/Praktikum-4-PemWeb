@@ -1,0 +1,35 @@
+<html>
+<head>
+    <!--memanggil file library jquery-->
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <!--mendefinisikan bahasa javascript-->
+    <script type="text/javascript">
+    //fungsi untuk menampilkan elemen-elemen yang dijalankan pada halaman web
+    $(document).ready(function(){
+        //elemen yang akan dijalankan pada halaman web
+        setTimeout(function(){
+            $("#kotak").fadeOut("slow",function(){
+                $("#kotak").remove();
+            });
+        }, 3000);
+    });
+    </script>
+    <!--mendefinisikan tipe dari style tampilan yaitu css-->
+    <style type="text/css">
+    #kotak {
+        width: 300px;
+        height: 80px;
+        background: rgb(220, 152, 233);
+        border: 1px solid black;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <!--penggunaan kelas css yang di eksekusi pada kelas:kotakk-->
+    <h3 id="kotak">
+        Perhatikan baik-baik teks ini, 
+        karena teks akan hilang dalam hitungan 3 detik
+    </h3>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Penggunaan Fade pada Suatu Kotak</title>
+        <!--menghubungkan dengan script style.css-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--mendefinisikan bahasa script yang digunakan dan memanggil file library jquery-->
+        <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+        <script>
+            //fungsi berisi elemen-elemen yang akan dieksekusi
+            $(document).ready(function(){
+                //setiap kode ber-semicolon mengeluarkan elemen eksekusi yang berbeda pada setiap selektor
+                $(".fadeout").click(function(){$("div").fadeOut("slow")});
+                $(".fadein").click(function(){$("div").fadeIn("slow")});
+                $(".fadeoutto").click(function(){$("div").fadeTo("slow",0.03)});
+                
+            })
+        </script>
+    </head>
+    <body>
+        
+            <table class="center">
+            <tr>
+                <!--eksekusi dari fungsi jquery pada masing-masing selektor-->
+                <td><button class="fadeOut">fade out</button></td>
+                <td><button  class="fadein">fade in</button></td>
+                <td><button  class="fadeoutto">fade to 0.03</button></td>
+            </tr>
+        
+            <tr>
+                <!--membuat bentuk kotak berwarna-->
+                <td><div colspan="3" style="width: 100px; height: 100px; background-color: rgb(42, 3, 80);"></div></td>
+            </tr>
+            
+            </table>
+        
+    </body>
+</html>

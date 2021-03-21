@@ -1,0 +1,42 @@
+<html>
+<head>
+    <!--untuk memanggil library jquery-->
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <!--mendefinisikan bahasa javascript-->
+    <script type="text/javascript">
+    //fungsi untuk menampilkan elemen-elem pada halaman web
+    $(document).ready(function(){
+        //elemen-elemen yang akan dijalankan pada halaman web
+        $("#daftar").addClass("merahkuning");//selector id
+        //selektor class
+        $(".subdaftar").addClass("kuninghitam");});
+    </script>
+    <!--mendefinisikan bahasa css-->
+    <style type="text/css">
+    /*pengaturan untuk tampilan yang akan di tampilkan*/
+    .merahkuning{
+        color:orangered;
+        font-weight: bold;
+        background-color: palegreen;
+        padding: 3px;
+    }
+    .kuninghitam{
+        color:rgb(174, 223, 60);
+        background-color: rgb(0, 33, 46);
+    }   
+        </style>
+</head>
+<body>
+    <div>
+        <p>Paragraf Pertama</p>
+    </div>
+    <div>
+        <!--elemen jquery yang dipanggil untuk dijalankan-->
+        <ul id="daftar">
+            <li>Item 1</li>
+            <li class="subdaftar">Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+</body>
+</html>

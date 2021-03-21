@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Hide and Show Images</title>
+        <!--menghubungkan pada script style css -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--mendefinisikan bahasa yang digunakan dan pemanggilan file library jquery-->
+        <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+        <script>
+            //fungsi yang berisi elemen-elemen untuk dieksekui
+            $(document).ready(function(){
+                $("#hide").click(function(){$("#img").hide("slow")});
+                $("#show").click(function(){$("#img").show("slow")});
+                //menggunakan fungsi selektor yang berbeda untuk setiap tombol
+                $(".hide").click(function(){$("#img2").hide("slow")});
+                $(".show").click(function(){$("#img2").show("slow")});
+            })
+        </script>
+    </head>
+    <body>
+        <div class="box">
+            <!--menggunakan table dengan pengaturan style.css agar terlihat lebih rapi-->
+            <table class="center">
+            <tr>
+                <!--eksekusi elemen-elemen yang didefinisikan pada fungsi jquery-->
+                <td><button id="hide">sembunyikan</button></td>
+                <td><button  id="show">tampilkan</button></td>
+                <td><button class="hide">sembunyikan</button></td>
+                <td><button  class="show">tampilkan</button></td>
+                
+            </tr>
+            <tr>
+                <!--media input berupa gambar-->
+                <td colspan="2"><img id="img" src="aestheticpinterest.jpg" width="249" height="440"></td>
+                <td colspan="2"><img id="img2" src="original.png" width="360" height="422"></td>
+            </tr>
+           
+            
+            </table>
+        </div>
+    </body>
+</html>
